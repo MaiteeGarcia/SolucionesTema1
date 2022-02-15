@@ -92,60 +92,48 @@ b.  Usa las funciones **dim, head, tail, str** para una primera visión de los c
 c.  Muestra los nombres de las filas y las columnas (**rownames**, **colnames**)
 
 ```{r}
+#a
+df_1 <- mammals
+df_2 <- Animals2
 
+#b
+dim(df_1)
+head(df_1)
+tail(df_1)
+str(df_1)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+dim(df_2)
+head(df_2)
+tail(df_2)
+str(df_2)
+#c
+rownames(df_1)
+rownames(df_1)
+rownames(df_2)
+rownames(df_2)
 ```
 
 d.  Usa la función **intersect** y almacena en la variable *commonAnimals* los aminales que aparezcan en ambos conjuntos
 
 ```{r}
-
-
-
-
-
-
+commonAnimals <- intersect(df_1, df_2)
+rownames(commonAnimals)
 ```
 
 e.  Usa **setdiff** para averiguar qué animales no están en ambos conjuntos. ¿Cuántos son ?. ¿Qué tipo de animales son?
 
 ```{r}
+a <- setdiff(rownames(df_1), rownames(df_2))
+a
 
-
-
-
-
-
+b <- setdiff(rownames(df_2), rownames(df_1))
+b
 ```
 
 e.  Determina las diferencia entre los animales que no aparecen en ambos conjuntos.
 
 ```{r}
-
-
-
-
-
-
-
-
-
-
-
-
+#Estan escritos de formas distintas 
 ```
 
 2.  La funcion **qqPlot** del paquete **car** puede ser utilizada para determinar gráficamente si una serie de puntos siguen una distribución de datos Gaussiana. Si las muestras están dentro de las líneas discontinuas podemos indicar que siguen una distribución Gaussiana con un 95 % de confianza. Utilizando esta función representa el logaritmo neperiano (**log**) del peso del cerebro (**brain weigths**) del registro de datos **mammals** del paquete **MASS** y conjunto de datos **Animals2** de la librería **robustbase**. ¿Presentan el mismo comportamiento ?.¿Podríamos decir que siguen una distribución Gaussiana ?
