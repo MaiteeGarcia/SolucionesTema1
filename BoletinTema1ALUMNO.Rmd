@@ -1,5 +1,5 @@
 ---
-title: "Boletín Tema 1"
+title: "Boletín Tema 1" 
 subtitle: Tratamiento de Datos. Grado en Ciencia de Datos- UV
 author: "Marcelino Martínez"
 date:  "`r Sys.Date()`"  #Pondría la fecha del día actual
@@ -92,8 +92,6 @@ b.  Usa las funciones **dim, head, tail, str** para una primera visión de los c
 c.  Muestra los nombres de las filas y las columnas (**rownames**, **colnames**)
 
 ```{r}
-library(MASS)
-library(robustbase)
 
 
 
